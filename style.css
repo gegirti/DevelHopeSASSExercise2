@@ -1,44 +1,17 @@
-div {
-  border: 1px red solid;
-  width: 60vw;
-}
+/* Error: expected ")".
+ *    ,
+ * 30 | @mixin article-card($color, $border-color, size-calc(18)) {
+ *    |                                            ^
+ *    '
+ *   style.scss 30:44  root stylesheet */
 
-h1 {
-  color: green;
-  text-decoration: underline;
-  text-underline-offset: 0.5rem;
-  text-decoration-color: blue;
-  text-decoration-thickness: 0.1rem;
-  text-align: center;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: expected ")".\a    \2577 \a 30 \2502  @mixin article-card($color, $border-color, size-calc(18)) {\d\a    \2502                                             ^\a    \2575 \a   style.scss 30:44  root stylesheet';
 }
-
-section {
-  display: flex;
-  justify-content: center;
-  margin: 20px;
-  text-align: center;
-}
-
-article {
-  color: blue;
-  border: 1px green solid;
-  padding: 10px;
-  font-size: 1rem;
-  width: 60vw;
-}
-article:nth-child(even) {
-  color: red;
-}
-
-.second-article {
-  color: green;
-  border: 1px green solid;
-  padding: 10px;
-  font-size: 1rem;
-  width: 60vw;
-}
-.second-article:nth-child(even) {
-  color: red;
-}
-
-/*# sourceMappingURL=style.css.map */

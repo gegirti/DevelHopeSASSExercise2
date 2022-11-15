@@ -22,22 +22,22 @@ section {
     margin: 20px;
     text-align: center;
 }
-// this exercise is not done 
-@function size-calc ($size: 1rem) {
-    $size: 1rem;
-    @return $size;
+
+@function size-calc ($size: 16) {
+    $response: ($size / 16)rem;
+    @return $response;
 }
-@mixin article-card($color, $border-color, $font-size) {
+@mixin article-card($color, $border-color, size-calc(18)) {
     color: $color;
     border: 1px $border-color solid;
     padding: 10px;
-    font-size: size-calc();
+    font-size: size-calc(16);
     &:nth-child(even) {color: red;}
     width: 60vw;
 }
 article {
-    @include article-card($color, $border-color, $font-size)
+    @include article-card($color, $border-color, size-calc(18))
 }
 .second-article {
-    @include article-card(green, green, 24px)
+    @include article-card(green, green, size-calc(48))
 }
