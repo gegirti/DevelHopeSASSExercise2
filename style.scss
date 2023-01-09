@@ -23,15 +23,15 @@ section {
     text-align: center;
 }
 
-@function size-calc ($size: 16) {
-    $response: ($size / 16)rem;
+@function size-calc ($size) {
+    $response: ($size / 16)+rem;
     @return $response;
 }
-@mixin article-card($color, $border-color, size-calc(18)) {
+@mixin article-card($color, $border-color, $font-size) {
     color: $color;
     border: 1px $border-color solid;
     padding: 10px;
-    font-size: size-calc(16);
+    font-size: size-calc(18);
     &:nth-child(even) {color: red;}
     width: 60vw;
 }
